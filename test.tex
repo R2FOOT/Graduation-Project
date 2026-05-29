@@ -1,5 +1,147 @@
-\documentclass{article}
+\documentclass[12pt, twoside]{book}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, inner=3.5cm, outer=2.5cm]{geometry}
+\usepackage{setspace}       % line spacing
+\usepackage{titlesec}       % chapter/section formatting
+\usepackage{hyperref}       % clickable TOC & references
+\usepackage{microtype}      % better text justification
+\usepackage{emptypage}      % suppresses headers/footers on blank pages
+\usepackage{cite}         % better bibliography formatting
+% ── Metadata ──────────────────────────────────────────────────────────────────
+\title{A High-Resolution TDC-Based Fractional-N Digital Phase-Locked Loop}
+\author{
+    Mohamed Ibrahim Abdeltawab \and
+    Ahmed Raafat Zidan \and
+    Habiba Abdelrazek Basiony \and
+    Karim Mohamed Abomera \and
+    Abdalla Zaki Mohamed \and
+    Omar Nabil Abdelwahed \and
+    Abdulrahman Atef Ali
+}
+\date{July 2026}
+
+% ── Chapter title formatting ──────────────────────────────────────────────────
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\centering}
+  {Chapter \thechapter}{20pt}{\Large}
+
 \begin{document}
-Hello World!
+
+% ══════════════════════════════════════════════════════════════════════════════
+%  TITLE PAGE
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+
+        % Thesis Title
+        {\Large\bfseries
+        A HIGH-RESOLUTION TDC-BASED FRACTIONAL-N\\[6pt]
+        DIGITAL PHASE-LOCKED LOOP
+        \par}
+
+        \vspace{1.5cm}
+
+        % Thesis declaration block
+        {\normalsize
+        A THESIS\\[6pt]
+        SUBMITTED TO THE DEPARTMENT OF\\
+        ELECTRONICS AND COMMUNICATIONS ENGINEERING\\
+        OF KAFRELSHEIKH UNIVERSITY\\[6pt]
+        IN PARTIAL FULFILLMENT OF THE REQUIREMENTS\\
+        FOR THE DEGREE OF\\[6pt]
+        \textbf{BACHELOR OF ENGINEERING SCIENCE}
+        \par}
+
+        \vfill
+
+        % Author & date
+        {\normalsize
+        Ahmed Raafat Zidan\\
+        Mohamed Ibrahim Abdeltawab\\
+        Habiba Abdelrazek Basiony\\
+        Karim Mohamed Abomera\\
+        Abdalla Zaki Mohamed\\
+        Omar Nabil Abdelwahed\\
+        Abdulrahman Atef Ali\\[4pt]
+        July 2026
+        \par}
+
+        \vspace{2cm}
+    \end{center}
+\end{titlepage}
+
+% ══════════════════════════════════════════════════════════════════════════════
+%  FRONT MATTER
+% ══════════════════════════════════════════════════════════════════════════════
+\frontmatter
+\pagestyle{plain}
+
+% ── Abstract ──────────────────────────────────────────────────────────────────
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+Your abstract text goes here.
+
+% ── Acknowledgement ───────────────────────────────────────────────────────────
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+Your acknowledgement text goes here.
+
+% ── Table of Contents ─────────────────────────────────────────────────────────
+\tableofcontents
+
+% ── List of Tables ────────────────────────────────────────────────────────────
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+% ── List of Figures ───────────────────────────────────────────────────────────
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+% ══════════════════════════════════════════════════════════════════════════════
+%  MAIN MATTER
+% ══════════════════════════════════════════════════════════════════════════════
+\mainmatter
+\onehalfspacing
+
+% ── Chapter 1 ─────────────────────────────────────────────────────────────────
+\chapter{Phase-Frequency Detector}
+This design is based on \cite{key2}.
+% Your content here
+
+% ── Chapter 2 ─────────────────────────────────────────────────────────────────
+\chapter{Loop Filter}
+% Your content here
+
+% ── Chapter 3 ─────────────────────────────────────────────────────────────────
+\chapter{Digitally Controlled Oscillator (DCO)}
+% Your content here
+
+% ── Chapter 4 ─────────────────────────────────────────────────────────────────
+\chapter{Divider}
+% Your content here
+
+% ── Chapter 5 ─────────────────────────────────────────────────────────────────
+\chapter{Conclusion}
+% Your content here
+
+% ══════════════════════════════════════════════════════════════════════════════
+%  BACK MATTER
+% ══════════════════════════════════════════════════════════════════════════════
+\backmatter
+
+% ── Appendices ────────────────────────────────────────────────────────────────
+\appendix
+\chapter{First Appendix Title}
+% Your content here
+
+\chapter{Second Appendix Title}
+% Your content here
+
+% ── Bibliography ──────────────────────────────────────────────────────────────
+\bibliographystyle{ieeetr}   % IEEE style — standard for ECE theses
+\bibliography{references}    % points to your references.bib file
+\addcontentsline{toc}{chapter}{Bibliography}
+
 \end{document}
- 
